@@ -3,19 +3,39 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E6BE55438FAD23677A1FD4D /* Pods_PhotoChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD264CE74E9BE5990B4BB3E8 /* Pods_PhotoChat.framework */; };
 		FB4DFB5627EDAC1200E0FF17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB5527EDAC1200E0FF17 /* AppDelegate.swift */; };
 		FB4DFB5827EDAC1200E0FF17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB5727EDAC1200E0FF17 /* SceneDelegate.swift */; };
 		FB4DFB5A27EDAC1200E0FF17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB5927EDAC1200E0FF17 /* ViewController.swift */; };
 		FB4DFB5D27EDAC1200E0FF17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB4DFB5B27EDAC1200E0FF17 /* Main.storyboard */; };
 		FB4DFB5F27EDAC1300E0FF17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB4DFB5E27EDAC1300E0FF17 /* Assets.xcassets */; };
 		FB4DFB6227EDAC1300E0FF17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB4DFB6027EDAC1300E0FF17 /* LaunchScreen.storyboard */; };
+		FB4DFB6C27EDB77300E0FF17 /* StoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB6B27EDB77300E0FF17 /* StoreCollectionViewCell.swift */; };
+		FB4DFB6F27EDB7A200E0FF17 /* StoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB6E27EDB7A200E0FF17 /* StoreTableViewCell.swift */; };
+		FB4DFB7127EDB7F300E0FF17 /* ModelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB7027EDB7F300E0FF17 /* ModelStore.swift */; };
+		FB4DFB7327EDC66700E0FF17 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB7227EDC66700E0FF17 /* ModelController.swift */; };
+		FB4DFB7527EDD9BC00E0FF17 /* PostNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB7427EDD9BC00E0FF17 /* PostNameTableViewCell.swift */; };
+		FB4DFB7727EDF4F700E0FF17 /* ModelPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB7627EDF4F700E0FF17 /* ModelPosts.swift */; };
+		FB4DFB7927F0604900E0FF17 /* CollectionPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB7827F0604900E0FF17 /* CollectionPostsViewController.swift */; };
+		FB4DFB7B27F060BC00E0FF17 /* PostsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB7A27F060BC00E0FF17 /* PostsCollectionViewCell.swift */; };
+		FB4DFB7E27F072B900E0FF17 /* OnePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB7D27F072B900E0FF17 /* OnePostViewController.swift */; };
+		FB4DFB8227F1B0EA00E0FF17 /* SearchPhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB8127F1B0EA00E0FF17 /* SearchPhotosCollectionViewController.swift */; };
+		FB4DFB8427F1B9A500E0FF17 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB8327F1B9A500E0FF17 /* NetworkService.swift */; };
+		FB4DFB8627F1C55300E0FF17 /* NetworkDataFeatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB8527F1C55300E0FF17 /* NetworkDataFeatcher.swift */; };
+		FB4DFB8827F1C5AC00E0FF17 /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB8727F1C5AC00E0FF17 /* SearchResults.swift */; };
+		FB4DFB8B27F1EB3C00E0FF17 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB8A27F1EB3C00E0FF17 /* PhotoCell.swift */; };
+		FB4DFB8D27F3053600E0FF17 /* LikeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB8C27F3053600E0FF17 /* LikeCollectionViewController.swift */; };
+		FB4DFB8F27F3057700E0FF17 /* LikesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB8E27F3057700E0FF17 /* LikesCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		004D6C9A7E5AC6B1311FF339 /* Pods-PhotoChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoChat.release.xcconfig"; path = "Target Support Files/Pods-PhotoChat/Pods-PhotoChat.release.xcconfig"; sourceTree = "<group>"; };
+		9767FD8626F74261EA5084A5 /* Pods-PhotoChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoChat.debug.xcconfig"; path = "Target Support Files/Pods-PhotoChat/Pods-PhotoChat.debug.xcconfig"; sourceTree = "<group>"; };
+		DD264CE74E9BE5990B4BB3E8 /* Pods_PhotoChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB4DFB5227EDAC1200E0FF17 /* PhotoChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB4DFB5527EDAC1200E0FF17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB4DFB5727EDAC1200E0FF17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +44,22 @@
 		FB4DFB5E27EDAC1300E0FF17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB4DFB6127EDAC1300E0FF17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB4DFB6327EDAC1300E0FF17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB4DFB6B27EDB77300E0FF17 /* StoreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCollectionViewCell.swift; sourceTree = "<group>"; };
+		FB4DFB6E27EDB7A200E0FF17 /* StoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
+		FB4DFB7027EDB7F300E0FF17 /* ModelStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelStore.swift; sourceTree = "<group>"; };
+		FB4DFB7227EDC66700E0FF17 /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
+		FB4DFB7427EDD9BC00E0FF17 /* PostNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNameTableViewCell.swift; sourceTree = "<group>"; };
+		FB4DFB7627EDF4F700E0FF17 /* ModelPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPosts.swift; sourceTree = "<group>"; };
+		FB4DFB7827F0604900E0FF17 /* CollectionPostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPostsViewController.swift; sourceTree = "<group>"; };
+		FB4DFB7A27F060BC00E0FF17 /* PostsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsCollectionViewCell.swift; sourceTree = "<group>"; };
+		FB4DFB7D27F072B900E0FF17 /* OnePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePostViewController.swift; sourceTree = "<group>"; };
+		FB4DFB8127F1B0EA00E0FF17 /* SearchPhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		FB4DFB8327F1B9A500E0FF17 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		FB4DFB8527F1C55300E0FF17 /* NetworkDataFeatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFeatcher.swift; sourceTree = "<group>"; };
+		FB4DFB8727F1C5AC00E0FF17 /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
+		FB4DFB8A27F1EB3C00E0FF17 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		FB4DFB8C27F3053600E0FF17 /* LikeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeCollectionViewController.swift; sourceTree = "<group>"; };
+		FB4DFB8E27F3057700E0FF17 /* LikesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +67,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E6BE55438FAD23677A1FD4D /* Pods_PhotoChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D368C2000F46E32BB26B133 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9767FD8626F74261EA5084A5 /* Pods-PhotoChat.debug.xcconfig */,
+				004D6C9A7E5AC6B1311FF339 /* Pods-PhotoChat.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		84559DE2D1AA8D951AC617A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD264CE74E9BE5990B4BB3E8 /* Pods_PhotoChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FB4DFB4927EDAC1200E0FF17 = {
 			isa = PBXGroup;
 			children = (
 				FB4DFB5427EDAC1200E0FF17 /* PhotoChat */,
 				FB4DFB5327EDAC1200E0FF17 /* Products */,
+				4D368C2000F46E32BB26B133 /* Pods */,
+				84559DE2D1AA8D951AC617A4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +112,71 @@
 		FB4DFB5427EDAC1200E0FF17 /* PhotoChat */ = {
 			isa = PBXGroup;
 			children = (
+				FB4DFB5B27EDAC1200E0FF17 /* Main.storyboard */,
+				FB4DFB6D27EDB77F00E0FF17 /* Cells */,
+				FB4DFB6A27EDB04500E0FF17 /* Models */,
+				FB4DFB7C27F062B000E0FF17 /* ModelController */,
+				FB4DFB8927F1C5D200E0FF17 /* Service */,
+				FB4DFB6927EDB03500E0FF17 /* Controllers */,
+				FB4DFB5E27EDAC1300E0FF17 /* Assets.xcassets */,
 				FB4DFB5527EDAC1200E0FF17 /* AppDelegate.swift */,
 				FB4DFB5727EDAC1200E0FF17 /* SceneDelegate.swift */,
-				FB4DFB5927EDAC1200E0FF17 /* ViewController.swift */,
-				FB4DFB5B27EDAC1200E0FF17 /* Main.storyboard */,
-				FB4DFB5E27EDAC1300E0FF17 /* Assets.xcassets */,
 				FB4DFB6027EDAC1300E0FF17 /* LaunchScreen.storyboard */,
 				FB4DFB6327EDAC1300E0FF17 /* Info.plist */,
 			);
 			path = PhotoChat;
+			sourceTree = "<group>";
+		};
+		FB4DFB6927EDB03500E0FF17 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FB4DFB5927EDAC1200E0FF17 /* ViewController.swift */,
+				FB4DFB7827F0604900E0FF17 /* CollectionPostsViewController.swift */,
+				FB4DFB7D27F072B900E0FF17 /* OnePostViewController.swift */,
+				FB4DFB8127F1B0EA00E0FF17 /* SearchPhotosCollectionViewController.swift */,
+				FB4DFB8C27F3053600E0FF17 /* LikeCollectionViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FB4DFB6A27EDB04500E0FF17 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FB4DFB7027EDB7F300E0FF17 /* ModelStore.swift */,
+				FB4DFB7627EDF4F700E0FF17 /* ModelPosts.swift */,
+				FB4DFB8727F1C5AC00E0FF17 /* SearchResults.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FB4DFB6D27EDB77F00E0FF17 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FB4DFB6B27EDB77300E0FF17 /* StoreCollectionViewCell.swift */,
+				FB4DFB6E27EDB7A200E0FF17 /* StoreTableViewCell.swift */,
+				FB4DFB7427EDD9BC00E0FF17 /* PostNameTableViewCell.swift */,
+				FB4DFB7A27F060BC00E0FF17 /* PostsCollectionViewCell.swift */,
+				FB4DFB8A27F1EB3C00E0FF17 /* PhotoCell.swift */,
+				FB4DFB8E27F3057700E0FF17 /* LikesCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FB4DFB7C27F062B000E0FF17 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				FB4DFB7227EDC66700E0FF17 /* ModelController.swift */,
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
+		FB4DFB8927F1C5D200E0FF17 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FB4DFB8327F1B9A500E0FF17 /* NetworkService.swift */,
+				FB4DFB8527F1C55300E0FF17 /* NetworkDataFeatcher.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +186,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB4DFB6627EDAC1300E0FF17 /* Build configuration list for PBXNativeTarget "PhotoChat" */;
 			buildPhases = (
+				0934632A1411C59BBF9A5818 /* [CP] Check Pods Manifest.lock */,
 				FB4DFB4E27EDAC1200E0FF17 /* Sources */,
 				FB4DFB4F27EDAC1200E0FF17 /* Frameworks */,
 				FB4DFB5027EDAC1200E0FF17 /* Resources */,
+				FA3CC6665491F53CD2548233 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,14 +246,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0934632A1411C59BBF9A5818 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhotoChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA3CC6665491F53CD2548233 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhotoChat/Pods-PhotoChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhotoChat/Pods-PhotoChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhotoChat/Pods-PhotoChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FB4DFB4E27EDAC1200E0FF17 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB4DFB7527EDD9BC00E0FF17 /* PostNameTableViewCell.swift in Sources */,
+				FB4DFB6C27EDB77300E0FF17 /* StoreCollectionViewCell.swift in Sources */,
+				FB4DFB8627F1C55300E0FF17 /* NetworkDataFeatcher.swift in Sources */,
+				FB4DFB8F27F3057700E0FF17 /* LikesCollectionViewCell.swift in Sources */,
+				FB4DFB7727EDF4F700E0FF17 /* ModelPosts.swift in Sources */,
+				FB4DFB7127EDB7F300E0FF17 /* ModelStore.swift in Sources */,
+				FB4DFB8B27F1EB3C00E0FF17 /* PhotoCell.swift in Sources */,
 				FB4DFB5A27EDAC1200E0FF17 /* ViewController.swift in Sources */,
+				FB4DFB8827F1C5AC00E0FF17 /* SearchResults.swift in Sources */,
 				FB4DFB5627EDAC1200E0FF17 /* AppDelegate.swift in Sources */,
+				FB4DFB8427F1B9A500E0FF17 /* NetworkService.swift in Sources */,
+				FB4DFB7927F0604900E0FF17 /* CollectionPostsViewController.swift in Sources */,
 				FB4DFB5827EDAC1200E0FF17 /* SceneDelegate.swift in Sources */,
+				FB4DFB7327EDC66700E0FF17 /* ModelController.swift in Sources */,
+				FB4DFB8227F1B0EA00E0FF17 /* SearchPhotosCollectionViewController.swift in Sources */,
+				FB4DFB7E27F072B900E0FF17 /* OnePostViewController.swift in Sources */,
+				FB4DFB7B27F060BC00E0FF17 /* PostsCollectionViewCell.swift in Sources */,
+				FB4DFB6F27EDB7A200E0FF17 /* StoreTableViewCell.swift in Sources */,
+				FB4DFB8D27F3053600E0FF17 /* LikeCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +455,7 @@
 		};
 		FB4DFB6727EDAC1300E0FF17 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9767FD8626F74261EA5084A5 /* Pods-PhotoChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +475,7 @@
 		};
 		FB4DFB6827EDAC1300E0FF17 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 004D6C9A7E5AC6B1311FF339 /* Pods-PhotoChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
