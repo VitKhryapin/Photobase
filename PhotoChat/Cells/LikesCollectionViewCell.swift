@@ -24,7 +24,7 @@ class LikesCollectionViewCell: UICollectionViewCell {
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.backgroundColor = .green
+        imageView.backgroundColor = .blue
         return imageView
     }()
     
@@ -43,8 +43,7 @@ class LikesCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-    
-        backgroundColor = .green
+        backgroundColor = .blue
         updateSelectedState()
         setupImageView()
         setupCheckmarkView()

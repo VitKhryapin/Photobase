@@ -8,9 +8,10 @@
 import UIKit
 
 class LikeCollectionViewController: UICollectionViewController {
-
-    var photos = [UnsplashPhoto]()
+    
+    var modelPhotoController = ModelPhotoController()
     private var selectedImages = [UIImage]()
+    private var indexPathSelectPhoto = [Int]()
     
     private lazy var trashBarButtonItem: UIBarButtonItem = {
         return UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(trashBarButtonTapped))
@@ -19,6 +20,7 @@ class LikeCollectionViewController: UICollectionViewController {
     private let enterSearchTermLabel: UILabel = {
         let label = UILabel()
         label.text = "You haven't add a photos yet"
+        label.textColor = .white
         label.textAlignment = .center
         label.font = UIFont.boldSystemFont(ofSize: 20)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -37,7 +39,6 @@ class LikeCollectionViewController: UICollectionViewController {
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.minimumInteritemSpacing = 1
         layout.minimumLineSpacing = 1
-        
         setupEnterLabel()
         setupNavigationBar()
         updateNavButtonState()
@@ -55,29 +56,26 @@ class LikeCollectionViewController: UICollectionViewController {
     
     // MARK: - NavigationItems action
     @objc private func trashBarButtonTapped() {
-        print(#function)
-//        let selectedPhotos = collectionView.indexPathsForSelectedItems?.reduce([], { (photosss, indexPath) -> [UnsplashPhoto] in
-//            var mutablePhotos = photosss
-//            let photo = photos[indexPath.item]
-//            mutablePhotos.append(photo)
-//            return mutablePhotos
-//        })
-//
-//        let alertController = UIAlertController(title: "", message: "\(selectedPhotos!.count) фото будут добавлены в альбом", preferredStyle: .alert)
-//        let add = UIAlertAction(title: "Добавить", style: .default) { (action) in
-//            let tabbar = self.tabBarController!
-//            let navVC = tabbar.viewControllers?[3] as! UINavigationController
-//            let likesVC = navVC.topViewController as! LikeCollectionViewController
-//            likesVC.photos.append(contentsOf: selectedPhotos ?? [])
-//            likesVC.collectionView.reloadData()
-//
-//            //self.refresh()
-//        }
-//        let cancel = UIAlertAction(title: "Отменить", style: .cancel) { (action) in
-//        }
-//        alertController.addAction(add)
-//        alertController.addAction(cancel)
-//        present(alertController, animated: true)
+        let selectedPhotos = collectionView.indexPathsForSelectedItems?.reduce([], { (_, indexPath) -> [Int] in
+            indexPathSelectPhoto.append(indexPath.item)
+            return indexPathSelectPhoto
+        })
+        
+        let alertController = UIAlertController(title: "", message: "\(selectedPhotos!.count) фото будут удалены из альбома", preferredStyle: .alert)
+        
+        let trash = UIAlertAction(title: "Удалить", style: .default) { (action) in
+            self.modelPhotoController.photos = self.modelPhotoController.photos
+                .enumerated()
+                .filter{!(selectedPhotos?.contains($0.offset) ?? false)}
+                .map{$0.element}
+            self.collectionView.reloadData()
+            self.indexPathSelectPhoto.removeAll()
+            self.refresh()
+        }
+        let cancel = UIAlertAction(title: "Отменить", style: .cancel) { (action) in }
+        alertController.addAction(trash)
+        alertController.addAction(cancel)
+        present(alertController, animated: true)
     }
     
     
@@ -92,26 +90,24 @@ class LikeCollectionViewController: UICollectionViewController {
     
     private func setupNavigationBar() {
         let titleLabel = UILabel()
-        titleLabel.text = "FAVOURITES"
+        titleLabel.text = "FAVORITES"
         titleLabel.font = UIFont.systemFont(ofSize: 15, weight: .medium)
         titleLabel.textColor = #colorLiteral(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
         navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: titleLabel)
         navigationItem.rightBarButtonItem = trashBarButtonItem
         trashBarButtonItem.isEnabled = false
     }
-
-
-    // MARK: UICollectionViewDataSource, Delegate
-
-
+    
+    
+    // MARK: - UICollectionViewDataSource, Delegate
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        enterSearchTermLabel.isHidden = photos.count != 0
-        return photos.count
+        enterSearchTermLabel.isHidden = modelPhotoController.photos.count != 0
+        return modelPhotoController.photos.count
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LikesCollectionViewCell.reuseId, for: indexPath) as! LikesCollectionViewCell
-        let unsplashPhoto = photos[indexPath.item]
+        let unsplashPhoto =  modelPhotoController.photos[indexPath.item]
         cell.unsplashPhoto = unsplashPhoto
         return cell
     }
@@ -131,14 +127,14 @@ class LikeCollectionViewController: UICollectionViewController {
             selectedImages.remove(at: index)
         }
     }
-
+    
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
 extension LikeCollectionViewController: UICollectionViewDelegateFlowLayout {
-
-func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    let width = collectionView.frame.width
-    return CGSize(width: width/3 - 1, height: width/3 - 1)
-}
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.frame.width
+        return CGSize(width: width/3 - 1, height: width/3 - 1)
+    }
 }

@@ -38,5 +38,6 @@ class ModelController {
                      ModelPosts(name: "Roma", photoProfile: "6", imagePost: "6-1"),
                      ModelPosts(name: "Roma", photoProfile: "6", imagePost: "6-2")
     ].shuffled()
-   
 }
+
+

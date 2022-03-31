@@ -9,8 +9,9 @@ import UIKit
 
 
 class SearchPhotosCollectionViewController: UICollectionViewController {
-
+    
     var networkDataFetcher = NetworkDataFeatcher()
+    var modelPhotoController = ModelPhotoController()
     private var timer: Timer?
     private var photos = [UnsplashPhoto]()
     private let itemsPerRow: CGFloat = 2
@@ -19,7 +20,17 @@ class SearchPhotosCollectionViewController: UICollectionViewController {
     private var numberOfSelectedPhotos: Int {
         return collectionView.indexPathsForSelectedItems?.count ?? 0
     }
-
+    
+    private let enterSearchTermLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Search field is empty or enter another option"
+        label.textColor = .white
+        label.textAlignment = .center
+        label.font = UIFont.boldSystemFont(ofSize: 15)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     private lazy var addBurButtonItem: UIBarButtonItem = {
         return UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addBarButtonTapped))
     }()
@@ -33,6 +44,7 @@ class SearchPhotosCollectionViewController: UICollectionViewController {
         setupCollectionView()
         setupNavigationBar()
         setupSearchBar()
+        setupEnterLabel()
         updateNavButtonState()
     }
     
@@ -47,9 +59,9 @@ class SearchPhotosCollectionViewController: UICollectionViewController {
         updateNavButtonState()
     }
     
+    
     // MARK: - NavigationItems action
     @objc private func addBarButtonTapped() {
-        print(#function)
         let selectedPhotos = collectionView.indexPathsForSelectedItems?.reduce([], { (photosss, indexPath) -> [UnsplashPhoto] in
             var mutablePhotos = photosss
             let photo = photos[indexPath.item]
@@ -62,9 +74,8 @@ class SearchPhotosCollectionViewController: UICollectionViewController {
             let tabbar = self.tabBarController!
             let navVC = tabbar.viewControllers?[3] as! UINavigationController
             let likesVC = navVC.topViewController as! LikeCollectionViewController
-            likesVC.photos.append(contentsOf: selectedPhotos ?? [])
+            likesVC.modelPhotoController.photos.append(contentsOf: selectedPhotos ?? [])
             likesVC.collectionView.reloadData()
-            
             self.refresh()
         }
         let cancel = UIAlertAction(title: "Отменить", style: .cancel) { (action) in
@@ -86,8 +97,6 @@ class SearchPhotosCollectionViewController: UICollectionViewController {
         present(shareController, animated: true, completion: nil)
     }
     
-    
-    
     // MARK: - Setup UI elements
     private func setupCollectionView() {
         collectionView.register(PhotoCell.self, forCellWithReuseIdentifier: PhotoCell.reuseID)
@@ -95,6 +104,7 @@ class SearchPhotosCollectionViewController: UICollectionViewController {
         collectionView.contentInsetAdjustmentBehavior = .automatic
         collectionView.allowsMultipleSelection = true
     }
+    
     
     private func setupNavigationBar() {
         let titleLabel = UILabel()
@@ -112,14 +122,21 @@ class SearchPhotosCollectionViewController: UICollectionViewController {
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.delegate = self
     }
-
-
+    
+    private func setupEnterLabel() {
+        collectionView.addSubview(enterSearchTermLabel)
+        enterSearchTermLabel.centerXAnchor.constraint(equalTo: collectionView.centerXAnchor).isActive = true
+        enterSearchTermLabel.topAnchor.constraint(equalTo: collectionView.topAnchor, constant: 50).isActive = true
+    }
+    
+    
     // MARK: UICollectionViewDataSource, Delegate
-
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        enterSearchTermLabel.isHidden = photos.count != 0
         return photos.count
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCell.reuseID, for: indexPath) as! PhotoCell
         let unsplashPhoto = photos[indexPath.item]

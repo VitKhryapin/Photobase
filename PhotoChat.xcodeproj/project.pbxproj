@@ -30,6 +30,9 @@
 		FB4DFB8B27F1EB3C00E0FF17 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB8A27F1EB3C00E0FF17 /* PhotoCell.swift */; };
 		FB4DFB8D27F3053600E0FF17 /* LikeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB8C27F3053600E0FF17 /* LikeCollectionViewController.swift */; };
 		FB4DFB8F27F3057700E0FF17 /* LikesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB8E27F3057700E0FF17 /* LikesCollectionViewCell.swift */; };
+		FB4DFB9127F352FC00E0FF17 /* ModelPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB9027F352FC00E0FF17 /* ModelPhotoController.swift */; };
+		FB4DFB9327F4587F00E0FF17 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB9227F4587F00E0FF17 /* ProfileViewController.swift */; };
+		FB4DFB9C27F5CE9300E0FF17 /* StoryProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB9B27F5CE9300E0FF17 /* StoryProfileCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,9 @@
 		FB4DFB8A27F1EB3C00E0FF17 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		FB4DFB8C27F3053600E0FF17 /* LikeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeCollectionViewController.swift; sourceTree = "<group>"; };
 		FB4DFB8E27F3057700E0FF17 /* LikesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesCollectionViewCell.swift; sourceTree = "<group>"; };
+		FB4DFB9027F352FC00E0FF17 /* ModelPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPhotoController.swift; sourceTree = "<group>"; };
+		FB4DFB9227F4587F00E0FF17 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		FB4DFB9B27F5CE9300E0FF17 /* StoryProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +141,7 @@
 				FB4DFB7D27F072B900E0FF17 /* OnePostViewController.swift */,
 				FB4DFB8127F1B0EA00E0FF17 /* SearchPhotosCollectionViewController.swift */,
 				FB4DFB8C27F3053600E0FF17 /* LikeCollectionViewController.swift */,
+				FB4DFB9227F4587F00E0FF17 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -158,6 +165,7 @@
 				FB4DFB7A27F060BC00E0FF17 /* PostsCollectionViewCell.swift */,
 				FB4DFB8A27F1EB3C00E0FF17 /* PhotoCell.swift */,
 				FB4DFB8E27F3057700E0FF17 /* LikesCollectionViewCell.swift */,
+				FB4DFB9B27F5CE9300E0FF17 /* StoryProfileCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -166,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				FB4DFB7227EDC66700E0FF17 /* ModelController.swift */,
+				FB4DFB9027F352FC00E0FF17 /* ModelPhotoController.swift */,
 			);
 			path = ModelController;
 			sourceTree = "<group>";
@@ -301,6 +310,7 @@
 				FB4DFB7127EDB7F300E0FF17 /* ModelStore.swift in Sources */,
 				FB4DFB8B27F1EB3C00E0FF17 /* PhotoCell.swift in Sources */,
 				FB4DFB5A27EDAC1200E0FF17 /* ViewController.swift in Sources */,
+				FB4DFB9C27F5CE9300E0FF17 /* StoryProfileCollectionViewCell.swift in Sources */,
 				FB4DFB8827F1C5AC00E0FF17 /* SearchResults.swift in Sources */,
 				FB4DFB5627EDAC1200E0FF17 /* AppDelegate.swift in Sources */,
 				FB4DFB8427F1B9A500E0FF17 /* NetworkService.swift in Sources */,
@@ -309,7 +319,9 @@
 				FB4DFB7327EDC66700E0FF17 /* ModelController.swift in Sources */,
 				FB4DFB8227F1B0EA00E0FF17 /* SearchPhotosCollectionViewController.swift in Sources */,
 				FB4DFB7E27F072B900E0FF17 /* OnePostViewController.swift in Sources */,
+				FB4DFB9127F352FC00E0FF17 /* ModelPhotoController.swift in Sources */,
 				FB4DFB7B27F060BC00E0FF17 /* PostsCollectionViewCell.swift in Sources */,
+				FB4DFB9327F4587F00E0FF17 /* ProfileViewController.swift in Sources */,
 				FB4DFB6F27EDB7A200E0FF17 /* StoreTableViewCell.swift in Sources */,
 				FB4DFB8D27F3053600E0FF17 /* LikeCollectionViewController.swift in Sources */,
 			);

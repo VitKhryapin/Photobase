@@ -11,6 +11,8 @@ class PostNameTableViewCell: UITableViewCell {
     @IBOutlet weak var photoProfile: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var postImage: UIImageView!
+    @IBOutlet weak var likeButtonOutlet: UIButton!
+    @IBOutlet weak var dislikeButtonOutlet: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,7 +21,6 @@ class PostNameTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
     
     public func refresh(_ post: ModelPosts) {
@@ -29,5 +30,23 @@ class PostNameTableViewCell: UITableViewCell {
             postImage.image = UIImage(named: imagePost)
         }
     }
-
+    @IBAction func likeButtonAction(_ sender: UIButton) {
+        if !sender.isSelected {
+            sender.isSelected = true
+            likeButtonOutlet.tintColor = .systemBlue
+        } else {
+            sender.isSelected = false
+            likeButtonOutlet.tintColor = .white
+        }
+    }
+    
+    @IBAction func dislikeButtonAction(_ sender: UIButton) {
+        if !sender.isSelected {
+            sender.isSelected = true
+            sender.tintColor = .systemRed
+        } else {
+            sender.isSelected = false
+            sender.tintColor = .white
+        }
+    }
 }
