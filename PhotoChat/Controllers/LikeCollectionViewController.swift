@@ -9,7 +9,7 @@ import UIKit
 
 class LikeCollectionViewController: UICollectionViewController {
     
-    var modelPhotoController = ModelPhotoController()
+    var modelPhotoController: ModelPhotoController!
     private var selectedImages = [UIImage]()
     private var indexPathSelectPhoto = [Int]()
     
@@ -43,6 +43,12 @@ class LikeCollectionViewController: UICollectionViewController {
         setupNavigationBar()
         updateNavButtonState()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        collectionView.reloadData()
+    }
+    
     
     private func updateNavButtonState() {
         trashBarButtonItem.isEnabled = numberOfSelectedPhotos > 0

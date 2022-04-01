@@ -33,6 +33,7 @@
 		FB4DFB9127F352FC00E0FF17 /* ModelPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB9027F352FC00E0FF17 /* ModelPhotoController.swift */; };
 		FB4DFB9327F4587F00E0FF17 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB9227F4587F00E0FF17 /* ProfileViewController.swift */; };
 		FB4DFB9C27F5CE9300E0FF17 /* StoryProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB9B27F5CE9300E0FF17 /* StoryProfileCollectionViewCell.swift */; };
+		FB4DFB9E27F700AB00E0FF17 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB9D27F700AB00E0FF17 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		FB4DFB9027F352FC00E0FF17 /* ModelPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPhotoController.swift; sourceTree = "<group>"; };
 		FB4DFB9227F4587F00E0FF17 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		FB4DFB9B27F5CE9300E0FF17 /* StoryProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryProfileCollectionViewCell.swift; sourceTree = "<group>"; };
+		FB4DFB9D27F700AB00E0FF17 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				FB4DFB8127F1B0EA00E0FF17 /* SearchPhotosCollectionViewController.swift */,
 				FB4DFB8C27F3053600E0FF17 /* LikeCollectionViewController.swift */,
 				FB4DFB9227F4587F00E0FF17 /* ProfileViewController.swift */,
+				FB4DFB9D27F700AB00E0FF17 /* SettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				FB4DFB7927F0604900E0FF17 /* CollectionPostsViewController.swift in Sources */,
 				FB4DFB5827EDAC1200E0FF17 /* SceneDelegate.swift in Sources */,
 				FB4DFB7327EDC66700E0FF17 /* ModelController.swift in Sources */,
+				FB4DFB9E27F700AB00E0FF17 /* SettingsViewController.swift in Sources */,
 				FB4DFB8227F1B0EA00E0FF17 /* SearchPhotosCollectionViewController.swift in Sources */,
 				FB4DFB7E27F072B900E0FF17 /* OnePostViewController.swift in Sources */,
 				FB4DFB9127F352FC00E0FF17 /* ModelPhotoController.swift in Sources */,

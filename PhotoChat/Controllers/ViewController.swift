@@ -24,11 +24,18 @@ class ViewController: UIViewController, UITabBarDelegate {
     
     let storyCellID = "profCell"
     let postCellID = "postCell"
-    let modelController = ModelController()
+    var modelController: ModelController!
     var refresh = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        collectionView.reloadData()
+        tableView.reloadData()
         self.refresh.addTarget(self, action: #selector(hendelRefresh), for: .valueChanged)
         self.refresh.tintColor = .white
         tableView.addSubview(refresh)
@@ -54,7 +61,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             let post = modelController.postArray[indexPath.row]
             cell.refresh(post)
             cell.photoProfile.layer.cornerRadius = 25
-            tableView.rowHeight = cell.postImage.image?.size.height ?? 350
             return cell
         }
         return UITableViewCell()
@@ -83,9 +89,9 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let tabbar = self.tabBarController
         let navVC = tabbar?.viewControllers?[4] as! UINavigationController
-        let profVC = navVC.topViewController as! ProfileViewController
-        profVC.idProfile = indexPath.row
-        profVC.check = true
+        let profVC = navVC.topViewController as? ProfileViewController
+        profVC?.idProfile = indexPath.row
+        profVC?.check = true
         tabbar?.selectedIndex = 4
     }
 }

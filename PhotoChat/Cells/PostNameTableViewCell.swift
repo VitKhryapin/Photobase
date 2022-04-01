@@ -31,22 +31,8 @@ class PostNameTableViewCell: UITableViewCell {
         }
     }
     @IBAction func likeButtonAction(_ sender: UIButton) {
-        if !sender.isSelected {
-            sender.isSelected = true
-            likeButtonOutlet.tintColor = .systemBlue
-        } else {
-            sender.isSelected = false
-            likeButtonOutlet.tintColor = .white
-        }
     }
     
     @IBAction func dislikeButtonAction(_ sender: UIButton) {
-        if !sender.isSelected {
-            sender.isSelected = true
-            sender.tintColor = .systemRed
-        } else {
-            sender.isSelected = false
-            sender.tintColor = .white
-        }
     }
 }

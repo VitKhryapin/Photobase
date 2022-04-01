@@ -14,7 +14,8 @@ class StoryProfileCollectionViewCell: UICollectionViewCell {
        let imageView = UIImageView()
        imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.backgroundColor = .black
-        imageView.contentMode = .scaleToFill
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
        return imageView
    }()
    

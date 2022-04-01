@@ -16,6 +16,26 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        if let tabBar = window?.rootViewController as? UITabBarController {
+            let vc = tabBar.viewControllers?[0] as? ViewController
+            let collectionVC = tabBar.viewControllers?[1] as? CollectionPostsViewController
+            let navVC = tabBar.viewControllers?[4] as! UINavigationController
+            let profVC = navVC.topViewController as! ProfileViewController
+            let modelController = ModelController()
+            vc?.modelController = modelController
+            collectionVC?.modelController = modelController
+            profVC.modelController = modelController
+            
+            let navSearchVC = tabBar.viewControllers?[2] as! UINavigationController
+            let searchVC = navSearchVC.topViewController as! SearchPhotosCollectionViewController
+            let modelPhotoController = ModelPhotoController()
+            searchVC.modelPhotoController = modelPhotoController
+            
+            let navLikeVC = tabBar.viewControllers?[3] as! UINavigationController
+            let likeVC = navLikeVC.topViewController as! LikeCollectionViewController
+            likeVC.modelPhotoController = modelPhotoController
+            
+        }
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 
@@ -45,6 +65,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+        
+        
+        
     }
 
 

@@ -16,7 +16,7 @@ class CollectionPostsViewController: UIViewController {
     }
     
     let postCellID = "postsCell"
-    var modelController = ModelController()
+    var modelController: ModelController!
     let itemsPerRow: CGFloat = 2
     let sectionInserts = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     

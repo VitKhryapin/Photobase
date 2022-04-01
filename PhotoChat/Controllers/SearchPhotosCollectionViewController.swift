@@ -11,7 +11,7 @@ import UIKit
 class SearchPhotosCollectionViewController: UICollectionViewController {
     
     var networkDataFetcher = NetworkDataFeatcher()
-    var modelPhotoController = ModelPhotoController()
+    var modelPhotoController: ModelPhotoController!
     private var timer: Timer?
     private var photos = [UnsplashPhoto]()
     private let itemsPerRow: CGFloat = 2
@@ -71,11 +71,12 @@ class SearchPhotosCollectionViewController: UICollectionViewController {
         
         let alertController = UIAlertController(title: "", message: "\(selectedPhotos!.count) фото будут добавлены в альбом", preferredStyle: .alert)
         let add = UIAlertAction(title: "Добавить", style: .default) { (action) in
-            let tabbar = self.tabBarController!
-            let navVC = tabbar.viewControllers?[3] as! UINavigationController
-            let likesVC = navVC.topViewController as! LikeCollectionViewController
-            likesVC.modelPhotoController.photos.append(contentsOf: selectedPhotos ?? [])
-            likesVC.collectionView.reloadData()
+            self.modelPhotoController.photos.append(contentsOf: selectedPhotos ?? [])
+//            let tabbar = self.tabBarController!
+//            let navVC = tabbar.viewControllers?[3] as! UINavigationController
+//            let likesVC = navVC.topViewController as! LikeCollectionViewController
+//            likesVC.modelPhotoController.photos.append(contentsOf: selectedPhotos ?? [])
+//            likesVC.collectionView.reloadData()
             self.refresh()
         }
         let cancel = UIAlertAction(title: "Отменить", style: .cancel) { (action) in

@@ -10,7 +10,7 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
-    var modelController = ModelController()
+    var modelController: ModelController!
     var idProfile = 0
     var check = false
     private let itemsPerRow: CGFloat = 3
@@ -79,7 +79,6 @@ class ProfileViewController: UIViewController {
         return label
     }()
     
-    
     let countSubscribeLabel: UILabel = {
        let label = UILabel()
         label.text = "\(Int.random(in: 0...300))"
@@ -87,6 +86,25 @@ class ProfileViewController: UIViewController {
         label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
+    }()
+    
+    let nameLabel: UILabel = {
+       let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 20, weight: .heavy)
+        label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    let buttonSettings: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "arrowtriangle.down.square"), for: .normal)
+        button.tintColor = .white
+        button.layer.cornerRadius = 25
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.isHidden = true
+        button.addTarget(nil, action: #selector(tapSettingsButton), for: .touchUpInside)
+        return button
     }()
     
     var collectionView = UICollectionView (frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout.init())
@@ -100,19 +118,16 @@ class ProfileViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         if check {
-            setupNavigationBar()
-            setupPhotoProfile()
             check = false
         } else {
             idProfile = 0
-            setupNavigationBar()
-            setupPhotoProfile()
+           
         }
+        
         createConstrants()
         setupCollectionView()
-        
+        tabBarController?.tabBar.isHidden = false
     }
     
     private func countStore() -> Int {
@@ -126,18 +141,15 @@ class ProfileViewController: UIViewController {
         return countStore
     }
     
-    
-    // MARK: - NavBar
-    private func setupNavigationBar() {
-        if let profile = modelController.profileArray[idProfile].nameProfile {
-            titleLabel.text = profile
-            let imageButton = UIImage(systemName: "arrowtriangle.down.square")
-            let downArrow = UIBarButtonItem.init(image: imageButton, style: .plain, target: nil, action: nil)
-            downArrow.tintColor = .white
-            navigationItem.leftBarButtonItems = [UIBarButtonItem.init(customView: titleLabel), downArrow]
-        }
+    @objc func tapSettingsButton() {
+        let vc = storyboard?.instantiateViewController(identifier: "SettingsViewController") as! SettingsViewController
+        vc.modelController = modelController
+        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
     
+    
+    // MARK: - SetupCollectionView
     private func setupCollectionView() {
         collectionView.backgroundColor = .black
         collectionView.register(StoryProfileCollectionViewCell.self, forCellWithReuseIdentifier: StoryProfileCollectionViewCell.reuseId)
@@ -148,7 +160,7 @@ class ProfileViewController: UIViewController {
         collectionView.reloadData()
     }
     
-    // MARK: - Constraints
+    // MARK: - CreateConstraints
     private func createConstrants() {
         setupPhotoProfile()
         createStoreLabel()
@@ -157,6 +169,8 @@ class ProfileViewController: UIViewController {
         createCountSubscribeLabel()
         createSubscribtionLabel()
         createCountSubscribtionLabel()
+        setupNameLabel()
+        createConstrainButton()
         createConstrainCollectionView()
     }
     
@@ -170,6 +184,7 @@ class ProfileViewController: UIViewController {
         photoProfile.widthAnchor.constraint(equalToConstant: 100).isActive = true
         photoProfile.heightAnchor.constraint(equalToConstant: 100).isActive = true
     }
+    
     
     private func createStoreLabel() {
         view.addSubview(storeLabel)
@@ -208,12 +223,32 @@ class ProfileViewController: UIViewController {
         countSubscribtionLabel.bottomAnchor.constraint(equalTo: subscribtionLabel.topAnchor, constant: -5).isActive = true
     }
     
+    private func setupNameLabel() {
+        if let nameProfile = modelController.profileArray[idProfile].nameProfile {
+            nameLabel.text = nameProfile
+        }
+        view.addSubview(nameLabel)
+        nameLabel.centerXAnchor.constraint(equalTo: photoProfile.centerXAnchor).isActive = true
+        nameLabel.topAnchor.constraint(equalTo: photoProfile.bottomAnchor, constant: 20).isActive = true
+    }
+    
     private func createConstrainCollectionView() {
         view.addSubview(collectionView)
         collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        collectionView.topAnchor.constraint(equalTo: photoProfile.bottomAnchor, constant: 20).isActive = true
+        collectionView.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 20).isActive = true
         collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    }
+    
+    private func createConstrainButton() {
+        if idProfile == 0 {
+            buttonSettings.isHidden = false
+        } else {
+            buttonSettings.isHidden = true
+        }
+        view.addSubview(buttonSettings)
+        buttonSettings.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor, constant: 10).isActive = true
+        buttonSettings.centerYAnchor.constraint(equalTo: nameLabel.centerYAnchor).isActive = true
     }
 }
 
@@ -231,6 +266,15 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
         photos = modelController.postArray.filter{Int($0.photoProfile!) == idProfile}
         cell.imageView.image = UIImage(named: photos[indexPath.item].imagePost!)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(identifier: "OnePostViewController") as! OnePostViewController
+        vc.image = UIImage(named: photos[indexPath.item].imagePost!)
+        self.navigationController?.pushViewController(vc, animated: true)
+        vc.navigationController?.isNavigationBarHidden = true
+        vc.tabBarController?.tabBar.isHidden = true
+        check = true
     }
 }
 
