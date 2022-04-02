@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "letter-p.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "b31c36ed6485466da64d6088ba40a8d1.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },

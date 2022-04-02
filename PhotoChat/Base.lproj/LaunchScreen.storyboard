@@ -15,10 +15,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hryapsgram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utM-lQ-ip6">
-                                <rect key="frame" x="93.5" y="425.5" width="227" height="45"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="35"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photobase" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utM-lQ-ip6">
+                                <rect key="frame" x="149" y="434.5" width="116.5" height="27"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
+                                <color key="textColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNb-O0-MV2">
+                                <rect key="frame" x="138" y="299" width="138" height="127"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="100"/>
+                                <color key="textColor" white="0.331427490689013" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -26,13 +32,15 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="utM-lQ-ip6" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="I2g-ob-BzL"/>
+                            <constraint firstItem="DNb-O0-MV2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Orx-Zz-Xxy"/>
                             <constraint firstItem="utM-lQ-ip6" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="VTt-ly-na6"/>
+                            <constraint firstItem="utM-lQ-ip6" firstAttribute="top" secondItem="DNb-O0-MV2" secondAttribute="bottom" constant="8.5" id="mUh-0g-dJz"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
 </document>

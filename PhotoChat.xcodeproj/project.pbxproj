@@ -34,6 +34,12 @@
 		FB4DFB9327F4587F00E0FF17 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB9227F4587F00E0FF17 /* ProfileViewController.swift */; };
 		FB4DFB9C27F5CE9300E0FF17 /* StoryProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB9B27F5CE9300E0FF17 /* StoryProfileCollectionViewCell.swift */; };
 		FB4DFB9E27F700AB00E0FF17 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DFB9D27F700AB00E0FF17 /* SettingsViewController.swift */; };
+		FB4DFBA127F856A600E0FF17 /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4DFBA027F856A600E0FF17 /* 0.png */; };
+		FB4DFBA327F856B900E0FF17 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4DFBA227F856B900E0FF17 /* 1.png */; };
+		FB4DFBA527F856C300E0FF17 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4DFBA427F856C300E0FF17 /* 3.png */; };
+		FB4DFBA927F8570200E0FF17 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4DFBA827F8570200E0FF17 /* 4.png */; };
+		FB4DFBAB27F8571100E0FF17 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4DFBAA27F8571100E0FF17 /* 5.png */; };
+		FB4DFBAD27F8571E00E0FF17 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4DFBAC27F8571E00E0FF17 /* 6.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +74,12 @@
 		FB4DFB9227F4587F00E0FF17 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		FB4DFB9B27F5CE9300E0FF17 /* StoryProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		FB4DFB9D27F700AB00E0FF17 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		FB4DFBA027F856A600E0FF17 /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
+		FB4DFBA227F856B900E0FF17 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		FB4DFBA427F856C300E0FF17 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		FB4DFBA827F8570200E0FF17 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		FB4DFBAA27F8571100E0FF17 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		FB4DFBAC27F8571E00E0FF17 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +143,7 @@
 				FB4DFB5727EDAC1200E0FF17 /* SceneDelegate.swift */,
 				FB4DFB6027EDAC1300E0FF17 /* LaunchScreen.storyboard */,
 				FB4DFB6327EDAC1300E0FF17 /* Info.plist */,
+				FB4DFB9F27F8567B00E0FF17 /* Preview */,
 			);
 			path = PhotoChat;
 			sourceTree = "<group>";
@@ -189,6 +202,19 @@
 				FB4DFB8527F1C55300E0FF17 /* NetworkDataFeatcher.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		FB4DFB9F27F8567B00E0FF17 /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				FB4DFBA027F856A600E0FF17 /* 0.png */,
+				FB4DFBA227F856B900E0FF17 /* 1.png */,
+				FB4DFBA427F856C300E0FF17 /* 3.png */,
+				FB4DFBA827F8570200E0FF17 /* 4.png */,
+				FB4DFBAA27F8571100E0FF17 /* 5.png */,
+				FB4DFBAC27F8571E00E0FF17 /* 6.png */,
+			);
+			path = Preview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,8 +276,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB4DFBA327F856B900E0FF17 /* 1.png in Resources */,
+				FB4DFBA127F856A600E0FF17 /* 0.png in Resources */,
+				FB4DFBAB27F8571100E0FF17 /* 5.png in Resources */,
 				FB4DFB6227EDAC1300E0FF17 /* LaunchScreen.storyboard in Resources */,
+				FB4DFBA527F856C300E0FF17 /* 3.png in Resources */,
 				FB4DFB5F27EDAC1300E0FF17 /* Assets.xcassets in Resources */,
+				FB4DFBAD27F8571E00E0FF17 /* 6.png in Resources */,
+				FB4DFBA927F8570200E0FF17 /* 4.png in Resources */,
 				FB4DFB5D27EDAC1200E0FF17 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
