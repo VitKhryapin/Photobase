@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "0CE88F67-5271-498F-8DBF-BE2FB8AD6D0B"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "865DF6C7-6ED5-4513-8107-5E0C1D520E51"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotoChat/SceneDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "scene(_:willConnectTo:options:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "668F98E0-914D-4104-B5A1-0CC64502A49C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotoChat/Controllers/ProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "ProfileViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "668F98E0-914D-4104-B5A1-0CC64502A49C - 73c997c4f1c125ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PhotoChat.ProfileViewController.idProfile.getter : Swift.Int"
+                  moduleName = "PhotoChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/porshe/Documents/Development/%D0%9F%D1%80%D0%BE%D1%87%D0%B5%D0%B5/PhotoChat/PhotoChat/Controllers/ProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "668F98E0-914D-4104-B5A1-0CC64502A49C - 4633b385af6e69d2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PhotoChat.ProfileViewController.idProfile.setter : Swift.Int"
+                  moduleName = "PhotoChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/porshe/Documents/Development/%D0%9F%D1%80%D0%BE%D1%87%D0%B5%D0%B5/PhotoChat/PhotoChat/Controllers/ProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "668F98E0-914D-4104-B5A1-0CC64502A49C - 4e9f36fa64c4693"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PhotoChat.ProfileViewController.idProfile.modify : Swift.Int"
+                  moduleName = "PhotoChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/porshe/Documents/Development/%D0%9F%D1%80%D0%BE%D1%87%D0%B5%D0%B5/PhotoChat/PhotoChat/Controllers/ProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "668F98E0-914D-4104-B5A1-0CC64502A49C - c81250ecdea0b0d2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PhotoChat.ProfileViewController.idProfile.modify : Swift.Int with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "PhotoChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/porshe/Documents/Development/%D0%9F%D1%80%D0%BE%D1%87%D0%B5%D0%B5/PhotoChat/PhotoChat/Controllers/ProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "668F98E0-914D-4104-B5A1-0CC64502A49C - b84b29c0255ca3e1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PhotoChat.ProfileViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; PhotoChat.ProfileViewController"
+                  moduleName = "PhotoChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/porshe/Documents/Development/%D0%9F%D1%80%D0%BE%D1%87%D0%B5%D0%B5/PhotoChat/PhotoChat/Controllers/ProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "300">
+               </Location>
+               <Location
+                  uuid = "668F98E0-914D-4104-B5A1-0CC64502A49C - b61ddd75a0780eea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PhotoChat.ProfileViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;PhotoChat.ProfileViewController&gt;"
+                  moduleName = "PhotoChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/porshe/Documents/Development/%D0%9F%D1%80%D0%BE%D1%87%D0%B5%D0%B5/PhotoChat/PhotoChat/Controllers/ProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "276">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "40DB9EF1-B362-4D64-97C1-8A72C13DD8E1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotoChat/Controllers/ProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
