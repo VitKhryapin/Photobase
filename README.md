@@ -1,7 +1,7 @@
 # Photobase
 
 ### Application
-Пример приложения для просмотра и сохранения фотографий.
+Пример приложения для просмотра фотографий (за основу взят Instagramm).
 
 *PS: Приложение реализованно для проработки переходов между экранами, функционалом TableView, CollectionView, NavigationController, TabBarController, Alert, ModelController,
 построение UI через Storyboard, также отдельные экраны сделаны только с помощью кода и т.д.*
